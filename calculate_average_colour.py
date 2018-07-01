@@ -10,31 +10,6 @@ def get_average_colour_of_file(file_path):
     return calculate_average_colour(image=im)
 
 
-# def calculate_average_colour(image):
-#     image.convert('RGB')
-#     # Calculate average for each channel
-#     average_red = 0
-#     average_green = 0
-#     average_blue = 0
-#     number_of_pixels = image.size[0] * image.size[1]
-#     # Get pixel values
-#     for x in range(image.size[0]):
-#         for y in range(image.size[1]):
-#             pixel = image.getpixel((x, y))
-#             # This returns a tuple of (RED, GREEN, BLUE)
-#             average_red += pixel[0]
-#             average_green += pixel[1]
-#             average_blue += pixel[2]
-#     average_red /= number_of_pixels
-#     average_blue /= number_of_pixels
-#     average_green /= number_of_pixels
-#     # print('File path: {}'.format(file_path))
-#     # print('Average Red: {}'.format(average_red))
-#     # print('Average Green: {}'.format(average_green))
-#     # print('Average Blue: {}'.format(average_blue))
-#     # Return as a single colour
-#     return average_red, average_green, average_blue
-
 def calculate_average_colour(pixels):
     # Calculate average for each channel
     average_red = 0
