@@ -1,13 +1,12 @@
 from PIL import Image
 
-# TODO: Set as a console param
 test_file_path = 'W:\Workspace\PD\Video Mosaicer\\frames\\frame-00001.bmp'
 
 
 def get_average_colour_of_file(file_path):
     # Load in image
     im = Image.open(fp=file_path)
-    return calculate_average_colour(image=im)
+    return calculate_average_colour(pixels=im.getdata())
 
 
 def calculate_average_colour(pixels):
@@ -25,7 +24,7 @@ def calculate_average_colour(pixels):
     average_red /= number_of_pixels
     average_blue /= number_of_pixels
     average_green /= number_of_pixels
-    # print('File pathe: {}'.format(file_path))
+    # print('File path: {}'.format(file_path))
     # print('Average Red: {}'.format(average_red))
     # print('Average Green: {}'.format(average_green))
     # print('Average Blue: {}'.format(average_blue))
@@ -58,3 +57,5 @@ if __name__ == '__main__':
     print(rgb_average_colour)
     lab_average_colour = convert_rgb_to_lab(rgb_average_colour)
     print(lab_average_colour)
+    average_colour = get_average_colour_of_file(test_file_path)
+    print(average_colour)

@@ -22,4 +22,4 @@ for top_left, top_right, bottom_left, bottom_right in grid_coords:
     for x in range(int(top_left[0]), int(top_right[0])):
         for y in range(int(top_left[1]), int(bottom_left[1])):
             pixels[x, y] = random_colour
-grid_image.save('test.png')
+grid_image.save('grid_test.jpg')
